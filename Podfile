@@ -4,16 +4,7 @@
 target 'Special108' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for Special108
-
-  target 'Special108Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Special108UITests' do
-    # Pods for testing
-  end
+  pod 'Firebase/Auth'
+  pod 'OTPFieldView'
 
 end

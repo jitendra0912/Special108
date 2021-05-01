@@ -1,6 +1,0 @@
-framework module Pods_Special108Tests {
-  umbrella header "Pods-Special108Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

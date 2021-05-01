@@ -7,8 +7,13 @@
 //
 
 import UIKit
-import CoreLocation
-
 class Helper: NSObject {
 
+static var share = Helper()
+    private override init() {
+        
+    }
+  
+    
+    
 }
