@@ -10,6 +10,7 @@ import UIKit
 class SPLoginViewController: BaseViewController {
     private let model = LoginViewModel()
 
+    @IBOutlet weak var pagerView: JAPagerView!
     @IBOutlet weak var viewBGMobile: UIView!
     @IBOutlet weak var buttonSubmit: UIButton!
     
@@ -18,7 +19,8 @@ class SPLoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialUI()
-        self.addObserver()
+     
+        setupPagerView()
       }
 
     @IBAction func didTapSubmit(_ sender: UIButton) {
@@ -30,6 +32,10 @@ class SPLoginViewController: BaseViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.addObserver()
+    }
 }
 extension SPLoginViewController {
     private func initialUI() {
@@ -40,6 +46,12 @@ extension SPLoginViewController {
         self.buttonSubmit.layer.cornerRadius = 8.0
         self.buttonSubmit.clipsToBounds = true
         self.buttonCountryCode.setTitle(model.getCountryCode(), for: .normal)
+    }
+    private func setupPagerView() {
+        let model = [PagerModel(image: #imageLiteral(resourceName: "img3")), PagerModel(image: #imageLiteral(resourceName: "img1")), PagerModel(image: #imageLiteral(resourceName: "img4"))]
+        pagerView.loadPagerView(model: model)
+        pagerView.isAutoScroll = true
+        
     }
     private func addObserver(){
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown

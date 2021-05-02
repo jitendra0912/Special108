@@ -36,6 +36,9 @@
 		4E19ACDF263DC853001175A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19ACDE263DC853001175A9 /* LoginViewModel.swift */; };
 		4E19ACEB263DCC01001175A9 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */; };
 		4E19AD10263DD894001175A9 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19AD0F263DD894001175A9 /* OTPViewController.swift */; };
+		4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */; };
+		4EDEFC9F263F2AF7008DA5A9 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */; };
+		4EDEFCA0263F2AF7008DA5A9 /* PagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		4E19ACDE263DC853001175A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		4E19AD0F263DD894001175A9 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAPagerView.swift; sourceTree = "<group>"; };
+		4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerModel.swift; sourceTree = "<group>"; };
 		5322B6E07DF54102972ADCCC /* Pods-Special108.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Special108.debug.xcconfig"; path = "Target Support Files/Pods-Special108/Pods-Special108.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6B7781860FBCA1E6A5851D /* Pods_Special108.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Special108.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +252,7 @@
 		4E19AC3A263D613A001175A9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4EDEFC99263F2AE1008DA5A9 /* Resources */,
 				4E19ACE9263DCBC1001175A9 /* FirebaseManager */,
 				4E19ACD4263DC750001175A9 /* CountryCode */,
 				4E19AC3B263D613A001175A9 /* Constants */,
@@ -329,6 +336,24 @@
 				4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */,
 			);
 			path = FirebaseManager;
+			sourceTree = "<group>";
+		};
+		4EDEFC99263F2AE1008DA5A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EDEFC9A263F2AF7008DA5A9 /* JApageView */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4EDEFC9A263F2AF7008DA5A9 /* JApageView */ = {
+			isa = PBXGroup;
+			children = (
+				4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */,
+				4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */,
+				4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */,
+			);
+			path = JApageView;
 			sourceTree = "<group>";
 		};
 		73867D98F2E3ADB52C679460 /* Pods */ = {
@@ -518,13 +543,16 @@
 				4E19AC5E263D6142001175A9 /* APIHandler.swift in Sources */,
 				4E19AC47263D613A001175A9 /* BaseCollectionViewCell.swift in Sources */,
 				4E19AC4C263D613A001175A9 /* UIImageView + AlamofireImage.swift in Sources */,
+				4EDEFCA0263F2AF7008DA5A9 /* PagerModel.swift in Sources */,
 				4E19AC50263D613A001175A9 /* ApplicationTexts.swift in Sources */,
 				4E19AC4B263D613A001175A9 /* BaseTableViewController.swift in Sources */,
+				4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */,
 				4E19ACD6263DC767001175A9 /* CountryCode.swift in Sources */,
 				4E19AD10263DD894001175A9 /* OTPViewController.swift in Sources */,
 				4E19AC6D263D7114001175A9 /* SPLoginViewController.swift in Sources */,
 				4E19ABF1263D5F4B001175A9 /* AppDelegate.swift in Sources */,
 				4E19ACDF263DC853001175A9 /* LoginViewModel.swift in Sources */,
+				4EDEFC9F263F2AF7008DA5A9 /* PageCollectionViewCell.swift in Sources */,
 				4E19AC49263D613A001175A9 /* BaseCollectionViewController.swift in Sources */,
 				4E19AC56263D613A001175A9 /* Helper.swift in Sources */,
 				4E19AC48263D613A001175A9 /* BaseTableViewCell.swift in Sources */,
