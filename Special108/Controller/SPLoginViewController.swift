@@ -13,18 +13,25 @@ class SPLoginViewController: BaseViewController {
     @IBOutlet weak var pagerView: JAPagerView!
     @IBOutlet weak var viewBGMobile: UIView!
     @IBOutlet weak var buttonSubmit: UIButton!
+     let MAX_LENGTH_PHONENUMBER = 10
+     let ACCEPTABLE_NUMBERS     = "0123456789"
     
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var buttonCountryCode: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialUI()
-     
         setupPagerView()
+        self.buttonSubmit.backgroundColor = .gray
       }
 
+    
     @IBAction func didTapSubmit(_ sender: UIButton) {
-        self.view.endEditing(true)
+        guard let text = mobileNumberTextField.text, !text.isEmpty else {
+            self.view.endEditing(true)
+            return
+        }
         model.getOtp(model.getCountryCode(), phoneNumber: self.mobileNumberTextField.text ?? "")
     }
     
@@ -48,10 +55,20 @@ extension SPLoginViewController {
         self.buttonCountryCode.setTitle(model.getCountryCode(), for: .normal)
     }
     private func setupPagerView() {
-        let model = [PagerModel(image: #imageLiteral(resourceName: "img3")), PagerModel(image: #imageLiteral(resourceName: "img1")), PagerModel(image: #imageLiteral(resourceName: "img4"))]
+        let model = [PagerModel(image: #imageLiteral(resourceName: "img5")), PagerModel(image: #imageLiteral(resourceName: "img1")), PagerModel(image: #imageLiteral(resourceName: "img4"))]
         pagerView.loadPagerView(model: model)
         pagerView.isAutoScroll = true
-        
+    }
+    
+    private func updateSubmitButton(_ limit: Int) {
+        if limit == 10 {
+            self.buttonSubmit.isEnabled = true
+            self.buttonSubmit.backgroundColor = .red
+        }
+        else{
+            self.buttonSubmit.isEnabled = false
+            self.buttonSubmit.backgroundColor = .gray
+        }
     }
     private func addObserver(){
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
@@ -75,5 +92,30 @@ extension SPLoginViewController {
       // move back the root view origin to zero
       self.view.frame.origin.y = 0
     }
+    func format(phoneNumber: String, shouldRemoveLastDigit: Bool = false) -> String {
+        guard !phoneNumber.isEmpty else { return "" }
+        guard let regex = try? NSRegularExpression(pattern: "[\\s-\\(\\)]", options: .caseInsensitive) else { return "" }
+        let r = NSString(string: phoneNumber).range(of: phoneNumber)
+        var number = regex.stringByReplacingMatches(in: phoneNumber, options: .init(rawValue: 0), range: r, withTemplate: "")
+
+        if number.count > 10 {
+            let tenthDigitIndex = number.index(number.startIndex, offsetBy: 10)
+            number = String(number[number.startIndex..<tenthDigitIndex])
+            self.buttonSubmit.isEnabled = true
+            self.buttonSubmit.backgroundColor = .red
+        }
+        else{
+            self.buttonSubmit.backgroundColor = .gray
+            self.buttonSubmit.isEnabled = false
+        }
+        return number
+    }
     
+}
+extension SPLoginViewController : UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let newLength: Int = textField.text!.count + string.count - range.length
+      //  self.updateSubmitButton(newLength)
+        return (newLength <= MAX_LENGTH_PHONENUMBER)
+        }
 }
