@@ -36,6 +36,7 @@
 		4E19ACDF263DC853001175A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19ACDE263DC853001175A9 /* LoginViewModel.swift */; };
 		4E19ACEB263DCC01001175A9 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */; };
 		4E19AD10263DD894001175A9 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19AD0F263DD894001175A9 /* OTPViewController.swift */; };
+		4E59A5472641C15B0027260C /* Extensions+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */; };
 		4EA57F8526407061008790E3 /* JAAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA57F8426407061008790E3 /* JAAlert.swift */; };
 		4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */; };
 		4EDEFC9F263F2AF7008DA5A9 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */; };
@@ -95,6 +96,7 @@
 		4E19ACDE263DC853001175A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		4E19AD0F263DD894001175A9 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+AttributedString.swift"; sourceTree = "<group>"; };
 		4EA57F8426407061008790E3 /* JAAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JAAlert.swift; sourceTree = "<group>"; };
 		4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAPagerView.swift; sourceTree = "<group>"; };
 		4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				4E19AC37263D613A001175A9 /* UIImageView + AlamofireImage.swift */,
 				4E19AC38263D613A001175A9 /* UIDevice+Extra.swift */,
 				4E19AC39263D613A001175A9 /* Extensions.swift */,
+				4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				4E19ABF3263D5F4B001175A9 /* SceneDelegate.swift in Sources */,
 				4E19AC4F263D613A001175A9 /* Constants.swift in Sources */,
 				4E19AC54263D613A001175A9 /* CurrentLocation.swift in Sources */,
+				4E59A5472641C15B0027260C /* Extensions+AttributedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol FirbaseOTPDelegate  {
+    
+    func getOTP(verificationCode: String)->()
+}
 class LoginViewModel: NSObject {
 
+     var delegate: FirbaseOTPDelegate?
     func getCountryCode()->String{
         
         let regionCode = Locale.current.regionCode ?? ""
@@ -17,6 +22,12 @@ class LoginViewModel: NSObject {
     }
    
     func getOtp(_ countryCode: String, phoneNumber:String) {
-        FirebaseAuth.share.getFirebaseOTP(countryCode, phoneNumber: phoneNumber)
+        FirebaseAuth.share.getFirebaseOTP(countryCode, phoneNumber: phoneNumber) { (verificationCode) in
+            guard let OTP =  verificationCode else {
+                return
+            }
+            self.delegate?.getOTP(verificationCode: OTP)
+        }
+       
     }
 }

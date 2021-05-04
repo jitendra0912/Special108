@@ -23,7 +23,8 @@ class SPLoginViewController: BaseViewController {
         super.viewDidLoad()
         self.initialUI()
         setupPagerView()
-        self.buttonSubmit.backgroundColor = .gray
+        deactiveSubmitButton()
+        model.delegate =  self
       }
 
     
@@ -32,7 +33,7 @@ class SPLoginViewController: BaseViewController {
             self.view.endEditing(true)
             return
         }
-        model.getOtp(model.getCountryCode(), phoneNumber: self.mobileNumberTextField.text ?? "")
+       model.getOtp(model.getCountryCode(), phoneNumber: self.mobileNumberTextField.text ?? "")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,6 +50,7 @@ extension SPLoginViewController {
         self.viewBGMobile.layer.cornerRadius = 8.0
         self.viewBGMobile.layer.borderWidth = 1.0
         self.viewBGMobile.layer.borderColor = UIColor.gray.cgColor
+        self.view.backgroundColor = .white//UIColor(hexString: "#FFBF00")
         self.viewBGMobile.clipsToBounds = true
         self.buttonSubmit.layer.cornerRadius = 8.0
         self.buttonSubmit.clipsToBounds = true
@@ -60,15 +62,14 @@ extension SPLoginViewController {
         pagerView.isAutoScroll = true
     }
     
-    private func updateSubmitButton(_ limit: Int) {
-        if limit == 10 {
-            self.buttonSubmit.isEnabled = true
-            self.buttonSubmit.backgroundColor = .red
-        }
-        else{
-            self.buttonSubmit.isEnabled = false
-            self.buttonSubmit.backgroundColor = .gray
-        }
+    private func activeSubmitButton() {
+        self.buttonSubmit.isEnabled = true
+        self.buttonSubmit.backgroundColor = UIColor(hexString: "33A9E1")
+    }
+    private func deactiveSubmitButton() {
+        self.buttonSubmit.isEnabled = false
+        self.buttonSubmit.backgroundColor = UIColor.gray
+       
     }
     private func addObserver(){
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
@@ -115,7 +116,23 @@ extension SPLoginViewController {
 extension SPLoginViewController : UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let newLength: Int = textField.text!.count + string.count - range.length
-      //  self.updateSubmitButton(newLength)
-        return (newLength <= MAX_LENGTH_PHONENUMBER)
+        if newLength > MAX_LENGTH_PHONENUMBER {
+            return false
         }
+        (newLength == MAX_LENGTH_PHONENUMBER) ?  self.activeSubmitButton() : self.deactiveSubmitButton()
+        return (newLength <= MAX_LENGTH_PHONENUMBER)
+    }
+}
+// MARK:- ViewModel Deleage
+
+extension SPLoginViewController : FirbaseOTPDelegate{
+    func getOTP(verificationCode: String) {
+        DispatchQueue.main.async {
+            let optController = self.storyboard?.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
+            self.navigationController?.pushViewController(optController, animated: true)
+            
+        }
+    }
+    
+    
 }

@@ -14,7 +14,7 @@ class FirebaseAuth: NSObject {
     var currentVerificationId: String?
     fileprivate override init() {}
     
-    public func getFirebaseOTP(_ countryCode: String, phoneNumber:String) {
+    public func getFirebaseOTP(_ countryCode: String, phoneNumber:String, success:@escaping (_ verificationCode:String?)->()) {
         // enabling testing code...
         // disable when you need to test with real device...
         
@@ -27,6 +27,7 @@ class FirebaseAuth: NSObject {
                 print("eror: \(String(describing: error.localizedDescription))")
                 return
             }
+            success(verificationID ?? "")
             self.currentVerificationId =  verificationID ?? ""
         }
     }
