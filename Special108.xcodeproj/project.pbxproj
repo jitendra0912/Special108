@@ -36,6 +36,10 @@
 		4E19ACDF263DC853001175A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19ACDE263DC853001175A9 /* LoginViewModel.swift */; };
 		4E19ACEB263DCC01001175A9 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */; };
 		4E19AD10263DD894001175A9 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19AD0F263DD894001175A9 /* OTPViewController.swift */; };
+		4E55B2A72642D5E600292C5A /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E55B2A62642D5E600292C5A /* NavigationHelper.swift */; };
+		4E55B4022644622B00292C5A /* SPDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E55B4012644622B00292C5A /* SPDashboardViewController.swift */; };
+		4E55B4072644649200292C5A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E55B4062644649200292C5A /* MasterViewController.swift */; };
+		4E55B41026446E3000292C5A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E55B40F26446E3000292C5A /* Dashboard.storyboard */; };
 		4E59A5472641C15B0027260C /* Extensions+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */; };
 		4EA57F8526407061008790E3 /* JAAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA57F8426407061008790E3 /* JAAlert.swift */; };
 		4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */; };
@@ -96,6 +100,10 @@
 		4E19ACDE263DC853001175A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4E19ACEA263DCC01001175A9 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		4E19AD0F263DD894001175A9 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		4E55B2A62642D5E600292C5A /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		4E55B4012644622B00292C5A /* SPDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDashboardViewController.swift; sourceTree = "<group>"; };
+		4E55B4062644649200292C5A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4E55B40F26446E3000292C5A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+AttributedString.swift"; sourceTree = "<group>"; };
 		4EA57F8426407061008790E3 /* JAAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JAAlert.swift; sourceTree = "<group>"; };
 		4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAPagerView.swift; sourceTree = "<group>"; };
@@ -173,7 +181,6 @@
 				4E19AC3A263D613A001175A9 /* Utilities */,
 				4E19ABF0263D5F4B001175A9 /* AppDelegate.swift */,
 				4E19ABF2263D5F4B001175A9 /* SceneDelegate.swift */,
-				4E19ABF6263D5F4B001175A9 /* Main.storyboard */,
 				4E19ABF9263D5F4C001175A9 /* Assets.xcassets */,
 				4E19ABFB263D5F4C001175A9 /* LaunchScreen.storyboard */,
 				4E19ABFE263D5F4C001175A9 /* Info.plist */,
@@ -257,6 +264,7 @@
 		4E19AC3A263D613A001175A9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4E55B40B26446D9C00292C5A /* Storyboard */,
 				4EA57F8326407043008790E3 /* JAAlert */,
 				4EDEFC99263F2AE1008DA5A9 /* Resources */,
 				4E19ACE9263DCBC1001175A9 /* FirebaseManager */,
@@ -316,6 +324,8 @@
 			children = (
 				4E19AC6C263D7114001175A9 /* SPLoginViewController.swift */,
 				4E19AD0F263DD894001175A9 /* OTPViewController.swift */,
+				4E55B4012644622B00292C5A /* SPDashboardViewController.swift */,
+				4E55B4062644649200292C5A /* MasterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,6 +354,23 @@
 			path = FirebaseManager;
 			sourceTree = "<group>";
 		};
+		4E55B2A52642D57800292C5A /* NavigationsUtility */ = {
+			isa = PBXGroup;
+			children = (
+				4E55B2A62642D5E600292C5A /* NavigationHelper.swift */,
+			);
+			path = NavigationsUtility;
+			sourceTree = "<group>";
+		};
+		4E55B40B26446D9C00292C5A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4E19ABF6263D5F4B001175A9 /* Main.storyboard */,
+				4E55B40F26446E3000292C5A /* Dashboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		4EA57F8326407043008790E3 /* JAAlert */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +382,7 @@
 		4EDEFC99263F2AE1008DA5A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E55B2A52642D57800292C5A /* NavigationsUtility */,
 				4EDEFC9A263F2AF7008DA5A9 /* JApageView */,
 			);
 			path = Resources;
@@ -485,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E19ABFD263D5F4C001175A9 /* LaunchScreen.storyboard in Resources */,
+				4E55B41026446E3000292C5A /* Dashboard.storyboard in Resources */,
 				4E19AC75263DA2D6001175A9 /* GoogleService-Info.plist in Resources */,
 				4E19ABFA263D5F4C001175A9 /* Assets.xcassets in Resources */,
 				4E19ABF8263D5F4B001175A9 /* Main.storyboard in Resources */,
@@ -574,13 +603,16 @@
 				4E19ACEB263DCC01001175A9 /* FirebaseAuth.swift in Sources */,
 				4E19AC5D263D6142001175A9 /* APIManager.swift in Sources */,
 				4E19AC4A263D613A001175A9 /* BaseViewController.swift in Sources */,
+				4E55B4072644649200292C5A /* MasterViewController.swift in Sources */,
 				4E19AC51263D613A001175A9 /* JAImageDownloader.swift in Sources */,
 				4E19AC4D263D613A001175A9 /* UIDevice+Extra.swift in Sources */,
 				4E19AC4E263D613A001175A9 /* Extensions.swift in Sources */,
 				4E19ABF3263D5F4B001175A9 /* SceneDelegate.swift in Sources */,
 				4E19AC4F263D613A001175A9 /* Constants.swift in Sources */,
+				4E55B4022644622B00292C5A /* SPDashboardViewController.swift in Sources */,
 				4E19AC54263D613A001175A9 /* CurrentLocation.swift in Sources */,
 				4E59A5472641C15B0027260C /* Extensions+AttributedString.swift in Sources */,
+				4E55B2A72642D5E600292C5A /* NavigationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

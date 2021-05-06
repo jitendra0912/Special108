@@ -23,17 +23,25 @@ class SPLoginViewController: BaseViewController {
         super.viewDidLoad()
         self.initialUI()
         setupPagerView()
-        deactiveSubmitButton()
+       // deactiveSubmitButton()
         model.delegate =  self
+      
       }
 
     
     @IBAction func didTapSubmit(_ sender: UIButton) {
-        guard let text = mobileNumberTextField.text, !text.isEmpty else {
-            self.view.endEditing(true)
-            return
-        }
-       model.getOtp(model.getCountryCode(), phoneNumber: self.mobileNumberTextField.text ?? "")
+        
+      
+        let optController = mainStoryboard.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
+
+        self.navigationController!.pushViewController(optController, animated: true)
+
+//        return
+//        guard let text = mobileNumberTextField.text, !text.isEmpty else {
+//            self.view.endEditing(true)
+//            return
+//        }
+//       model.getOtp(model.getCountryCode(), phoneNumber: self.mobileNumberTextField.text ?? "")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -129,7 +137,8 @@ extension SPLoginViewController : FirbaseOTPDelegate{
     func getOTP(verificationCode: String) {
         DispatchQueue.main.async {
             let optController = self.storyboard?.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
-            self.navigationController?.pushViewController(optController, animated: true)
+            NavigationHelper.shared.navigationController.pushViewController(optController, animated: true)
+           // self.navigationController?.pushViewController(optController, animated: true)
             
         }
     }

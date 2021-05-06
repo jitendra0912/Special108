@@ -25,6 +25,10 @@ class OTPViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.resendTimer.invalidate()
+    }
     
     func setupOtpView(){
             self.otpView.fieldsCount = 6
@@ -54,6 +58,7 @@ class OTPViewController: BaseViewController {
             // if you want to reset the time make count = 60 and resendTime.fire()
         }
     }
+    
     private func AttributedOTPCallButton() {
         let underlineAttributedString = NSAttributedString(string:"Get OTP on call", attributes:[NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue])
           self.buttonOTPCall.setAttributedTitle(underlineAttributedString, for: .normal)
@@ -84,5 +89,9 @@ class OTPViewController: BaseViewController {
     }
     
     @IBAction func didTapContinue(_ sender: UIButton) {
+        let rootController  = dashboardStoryboard.instantiateViewController(withIdentifier:"DashboardNavigation") as? UINavigationController
+        NavigationHelper.shared.navigationController =  rootController
+        UIApplication.shared.windows.first!.rootViewController =  rootController
+
     }
 }
