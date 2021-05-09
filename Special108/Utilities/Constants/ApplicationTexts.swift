@@ -8,6 +8,16 @@
 
 import Foundation
 
+struct SPNavigationTitle {
+    
+    static let dashboardTitle = "Dashboard"
+    
+}
+
+
+
+
+
 let NO_NETWORK = "No network connection."
 let REQUEST_TIME_OUT = "The request timed out"
 

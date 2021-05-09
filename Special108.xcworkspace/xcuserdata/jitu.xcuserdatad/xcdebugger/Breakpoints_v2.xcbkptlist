@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "04157207-BDDB-4D50-A742-0D59FF6FF48E"
+            uuid = "A86DB96B-24BE-4DAD-BA28-FA3E439BDAE9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Special108/Controller/SPDashboardViewController.swift"
+            filePath = "Special108/BaseClasses/BaseControllers/BaseNavigationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "action(_:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "setNavigationBarTitle(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

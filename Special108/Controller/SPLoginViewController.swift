@@ -72,7 +72,7 @@ extension SPLoginViewController {
     
     private func activeSubmitButton() {
         self.buttonSubmit.isEnabled = true
-        self.buttonSubmit.backgroundColor = UIColor(hexString: "33A9E1")
+        self.buttonSubmit.backgroundColor = UIColor().colorFromHexString("33A9E1")
     }
     private func deactiveSubmitButton() {
         self.buttonSubmit.isEnabled = false

@@ -25,7 +25,6 @@ func IS_OF_4_INCH() -> Bool {
 }
 
 
-
 // GOOGLE LOCATION SEARCH KYE
 let GOOGLE_MAP_KEY = "AIzaSyDZqJOc5iSvCMkNStGStX0_KioP1yB4E3M" // THIS KYE USER ONLY FOR TESTING USED CHANGE WHEN YOU GET CLIENT GOOGLE AP KYE.
 let GOOGLE_BASE_URL_STRING = "https://maps.googleapis.com/maps/api/place/autocomplete/json"

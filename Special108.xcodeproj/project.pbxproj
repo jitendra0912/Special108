@@ -42,6 +42,10 @@
 		4E55B41026446E3000292C5A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E55B40F26446E3000292C5A /* Dashboard.storyboard */; };
 		4E59A5472641C15B0027260C /* Extensions+AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */; };
 		4EA57F8526407061008790E3 /* JAAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA57F8426407061008790E3 /* JAAlert.swift */; };
+		4EC2C8DB2645C0D200837F24 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2C8DA2645C0D200837F24 /* BaseNavigationViewController.swift */; };
+		4EC2C8E32648223300837F24 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2C8E22648223300837F24 /* ThemeManager.swift */; };
+		4EC2C8F426485DBA00837F24 /* SPTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2C8F326485DBA00837F24 /* SPTabBarItems.swift */; };
+		4EC2C90426485E1100837F24 /* SPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2C90326485E1100837F24 /* SPTabBarController.swift */; };
 		4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */; };
 		4EDEFC9F263F2AF7008DA5A9 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */; };
 		4EDEFCA0263F2AF7008DA5A9 /* PagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */; };
@@ -106,6 +110,10 @@
 		4E55B40F26446E3000292C5A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		4E59A5462641C15A0027260C /* Extensions+AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+AttributedString.swift"; sourceTree = "<group>"; };
 		4EA57F8426407061008790E3 /* JAAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JAAlert.swift; sourceTree = "<group>"; };
+		4EC2C8DA2645C0D200837F24 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		4EC2C8E22648223300837F24 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		4EC2C8F326485DBA00837F24 /* SPTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTabBarItems.swift; sourceTree = "<group>"; };
+		4EC2C90326485E1100837F24 /* SPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTabBarController.swift; sourceTree = "<group>"; };
 		4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAPagerView.swift; sourceTree = "<group>"; };
 		4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerModel.swift; sourceTree = "<group>"; };
@@ -246,6 +254,7 @@
 				4E19AC33263D6139001175A9 /* BaseCollectionViewController.swift */,
 				4E19AC34263D6139001175A9 /* BaseViewController.swift */,
 				4E19AC35263D6139001175A9 /* BaseTableViewController.swift */,
+				4EC2C8DA2645C0D200837F24 /* BaseNavigationViewController.swift */,
 			);
 			path = BaseControllers;
 			sourceTree = "<group>";
@@ -379,9 +388,28 @@
 			path = JAAlert;
 			sourceTree = "<group>";
 		};
+		4EC2C8E12648221300837F24 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2C8E22648223300837F24 /* ThemeManager.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		4EC2C8F226485D3C00837F24 /* SPTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				4EC2C8F326485DBA00837F24 /* SPTabBarItems.swift */,
+				4EC2C90326485E1100837F24 /* SPTabBarController.swift */,
+			);
+			path = SPTabbarController;
+			sourceTree = "<group>";
+		};
 		4EDEFC99263F2AE1008DA5A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4EC2C8F226485D3C00837F24 /* SPTabbarController */,
+				4EC2C8E12648221300837F24 /* Themes */,
 				4E55B2A52642D57800292C5A /* NavigationsUtility */,
 				4EDEFC9A263F2AF7008DA5A9 /* JApageView */,
 			);
@@ -590,17 +618,21 @@
 				4EDEFCA0263F2AF7008DA5A9 /* PagerModel.swift in Sources */,
 				4E19AC50263D613A001175A9 /* ApplicationTexts.swift in Sources */,
 				4E19AC4B263D613A001175A9 /* BaseTableViewController.swift in Sources */,
+				4EC2C8F426485DBA00837F24 /* SPTabBarItems.swift in Sources */,
 				4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */,
 				4E19ACD6263DC767001175A9 /* CountryCode.swift in Sources */,
 				4E19AD10263DD894001175A9 /* OTPViewController.swift in Sources */,
 				4E19AC6D263D7114001175A9 /* SPLoginViewController.swift in Sources */,
 				4E19ABF1263D5F4B001175A9 /* AppDelegate.swift in Sources */,
 				4E19ACDF263DC853001175A9 /* LoginViewModel.swift in Sources */,
+				4EC2C8E32648223300837F24 /* ThemeManager.swift in Sources */,
 				4EDEFC9F263F2AF7008DA5A9 /* PageCollectionViewCell.swift in Sources */,
 				4E19AC49263D613A001175A9 /* BaseCollectionViewController.swift in Sources */,
 				4E19AC56263D613A001175A9 /* Helper.swift in Sources */,
 				4E19AC48263D613A001175A9 /* BaseTableViewCell.swift in Sources */,
 				4E19ACEB263DCC01001175A9 /* FirebaseAuth.swift in Sources */,
+				4EC2C90426485E1100837F24 /* SPTabBarController.swift in Sources */,
+				4EC2C8DB2645C0D200837F24 /* BaseNavigationViewController.swift in Sources */,
 				4E19AC5D263D6142001175A9 /* APIManager.swift in Sources */,
 				4E19AC4A263D613A001175A9 /* BaseViewController.swift in Sources */,
 				4E55B4072644649200292C5A /* MasterViewController.swift in Sources */,

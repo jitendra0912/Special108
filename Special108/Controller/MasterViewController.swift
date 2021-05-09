@@ -11,19 +11,11 @@ class MasterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        NavigationHelper.shared.setNavigationBarTitle("jitendra", inViewController: self)
+        NavigationHelper.shared.addLeftBarButtonItems(inViewController: self, withButtonType: .backBarButtonType)
+        NavigationHelper.shared.addRightBarButtons(basketView: true, showNotification: true, showSearch: true, viewController: self)
+      
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

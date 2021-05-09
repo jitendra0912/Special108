@@ -22,6 +22,7 @@ class OTPViewController: BaseViewController {
         self.setupOtpView()
         self.initialUI()
         self.startOTPTimer()
+        self.view.backgroundColor =  ThemeManager.theme1.backgroundColor
 
         // Do any additional setup after loading the view.
     }
@@ -75,7 +76,7 @@ class OTPViewController: BaseViewController {
             let text = "Didn't receive the OTP? Resend"
            let attributedText = NSMutableAttributedString.getAttributedString(fromString: text)
            attributedText.apply(font: UIFont.boldSystemFont(ofSize: 16), subString: "Resend")
-            attributedText.apply(color: UIColor(hexString: "33A9E1"), subString: "Resend")
+            attributedText.apply(color: UIColor().colorFromHexString("33A9E1"), subString: "Resend")
            self.labelOTPResend.attributedText = attributedText
     }
     private func initialUI() {
@@ -89,9 +90,10 @@ class OTPViewController: BaseViewController {
     }
     
     @IBAction func didTapContinue(_ sender: UIButton) {
-        let rootController  = dashboardStoryboard.instantiateViewController(withIdentifier:"DashboardNavigation") as? UINavigationController
+        let rootController  = dashboardStoryboard.instantiateViewController(withIdentifier:"MainNavigation") as? UINavigationController
         NavigationHelper.shared.navigationController =  rootController
+      //  NavigationHelper.shared.navigationController.navigationItem.title = "sdmskmds"
         UIApplication.shared.windows.first!.rootViewController =  rootController
-
+       
     }
 }

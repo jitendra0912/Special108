@@ -11,35 +11,21 @@ class SPDashboardViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
- //
-        
-       //  rootController.viewControllers = [optController]
-        // NavigationManager.helper.navigationController = rootController
-        
-        
-        
-        
-        // Do any additional setup after loading the view.
-    }
+        self.navigationConfigure()
+      }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    @IBAction func action(_ sender: UIButton) {
-        let masterVC = mainStoryboard.instantiateViewController(withIdentifier:"MasterViewController") as! MasterViewController
-        NavigationHelper.shared.navigationController!.pushViewController(masterVC, animated: true)
-    
+    @IBAction func actionMove(_ sender: UIButton) {
+        let masterVC = dashboardStoryboard.instantiateViewController(withIdentifier:"MasterViewController") as! MasterViewController
+        NavigationHelper.shared.navigationController.pushViewController(masterVC, animated: true)
     
     }
+ }
+extension SPDashboardViewController {
+    private func navigationConfigure() {
+        NavigationHelper.shared.setNavigationBarTitle(SPNavigationTitle.dashboardTitle, inViewController: self)
+        NavigationHelper.shared.addLeftBarButtonItems(inViewController: self, withButtonType: .HeaderMenuIcon)
+    }
+    
+    
 }
-
