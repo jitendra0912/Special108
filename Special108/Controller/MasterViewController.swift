@@ -13,7 +13,7 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
         NavigationHelper.shared.setNavigationBarTitle("jitendra", inViewController: self)
         NavigationHelper.shared.addLeftBarButtonItems(inViewController: self, withButtonType: .backBarButtonType)
-        NavigationHelper.shared.addRightBarButtons(basketView: true, showNotification: true, showSearch: true, viewController: self)
+        NavigationHelper.shared.addRightBarButtons(basketView: true, showNotification: true, showSearch: false, viewController: self)
       
     
     }
