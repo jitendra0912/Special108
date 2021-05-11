@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # get the argument message
-message="Testing command base"
+read -p "Type Your Comments:" message
+
 
 # Use current date time in the commit message when its not passed
 if [[ -z "${message// }" ]]
