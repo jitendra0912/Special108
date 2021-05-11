@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get the argument message
-message="$1"
+message="Testing command base"
 
 # Use current date time in the commit message when its not passed
 if [[ -z "${message// }" ]]
