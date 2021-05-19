@@ -90,6 +90,33 @@ class OTPViewController: BaseViewController {
     }
     
     @IBAction func didTapContinue(_ sender: UIButton) {
+        
+        let fbTabBarController = SPTabBarController()
+        
+        let firstViewController = FirstVC()
+        firstViewController.tabBarItem = SPTabBarItems(title: "First",
+                                                      image: UIImage(systemName: "1.circle.fill"),
+                                                      tag: 0,
+                                                      tintColor: .systemBlue)
+
+        let secondViewController = SecoundVC()
+        secondViewController.tabBarItem = SPTabBarItems(title: "Second",
+                                                       image: UIImage(systemName: "2.circle.fill"),
+                                                       tag: 1,
+                                                       tintColor: .systemTeal)
+
+        let thirdViewController = ThiredVC()
+        thirdViewController.tabBarItem = SPTabBarItems(title: "Third",
+                                                      image: UIImage(systemName: "3.circle.fill"),
+                                                      tag: 2,
+                                                      tintColor: .systemRed)
+        
+        fbTabBarController.setViewControllers([firstViewController, secondViewController, thirdViewController], animated: true)
+        
+        
+        
+        
+        
         let rootController  = dashboardStoryboard.instantiateViewController(withIdentifier:"MainNavigation") as? UINavigationController
         NavigationHelper.shared.navigationController =  rootController
       //  NavigationHelper.shared.navigationController.navigationItem.title = "sdmskmds"

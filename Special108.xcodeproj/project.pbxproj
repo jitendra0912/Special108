@@ -49,6 +49,9 @@
 		4EDEFC9E263F2AF7008DA5A9 /* JAPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */; };
 		4EDEFC9F263F2AF7008DA5A9 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */; };
 		4EDEFCA0263F2AF7008DA5A9 /* PagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */; };
+		4EF68CB3265591DF00D9CAD3 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF68CB2265591DF00D9CAD3 /* FirstVC.swift */; };
+		4EF68CB8265591F000D9CAD3 /* SecoundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF68CB7265591EF00D9CAD3 /* SecoundVC.swift */; };
+		4EF68CBD2655920400D9CAD3 /* ThiredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF68CBC2655920400D9CAD3 /* ThiredVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,9 @@
 		4EDEFC9B263F2AF7008DA5A9 /* JAPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JAPagerView.swift; sourceTree = "<group>"; };
 		4EDEFC9C263F2AF7008DA5A9 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EDEFC9D263F2AF7008DA5A9 /* PagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerModel.swift; sourceTree = "<group>"; };
+		4EF68CB2265591DF00D9CAD3 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		4EF68CB7265591EF00D9CAD3 /* SecoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundVC.swift; sourceTree = "<group>"; };
+		4EF68CBC2655920400D9CAD3 /* ThiredVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThiredVC.swift; sourceTree = "<group>"; };
 		5322B6E07DF54102972ADCCC /* Pods-Special108.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Special108.debug.xcconfig"; path = "Target Support Files/Pods-Special108/Pods-Special108.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6B7781860FBCA1E6A5851D /* Pods_Special108.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Special108.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -335,6 +341,9 @@
 				4E19AD0F263DD894001175A9 /* OTPViewController.swift */,
 				4E55B4012644622B00292C5A /* SPDashboardViewController.swift */,
 				4E55B4062644649200292C5A /* MasterViewController.swift */,
+				4EF68CB2265591DF00D9CAD3 /* FirstVC.swift */,
+				4EF68CB7265591EF00D9CAD3 /* SecoundVC.swift */,
+				4EF68CBC2655920400D9CAD3 /* ThiredVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -614,6 +623,7 @@
 				4E19AC5E263D6142001175A9 /* APIHandler.swift in Sources */,
 				4E19AC47263D613A001175A9 /* BaseCollectionViewCell.swift in Sources */,
 				4E19AC4C263D613A001175A9 /* UIImageView + AlamofireImage.swift in Sources */,
+				4EF68CB3265591DF00D9CAD3 /* FirstVC.swift in Sources */,
 				4EA57F8526407061008790E3 /* JAAlert.swift in Sources */,
 				4EDEFCA0263F2AF7008DA5A9 /* PagerModel.swift in Sources */,
 				4E19AC50263D613A001175A9 /* ApplicationTexts.swift in Sources */,
@@ -632,6 +642,7 @@
 				4E19AC48263D613A001175A9 /* BaseTableViewCell.swift in Sources */,
 				4E19ACEB263DCC01001175A9 /* FirebaseAuth.swift in Sources */,
 				4EC2C90426485E1100837F24 /* SPTabBarController.swift in Sources */,
+				4EF68CBD2655920400D9CAD3 /* ThiredVC.swift in Sources */,
 				4EC2C8DB2645C0D200837F24 /* BaseNavigationViewController.swift in Sources */,
 				4E19AC5D263D6142001175A9 /* APIManager.swift in Sources */,
 				4E19AC4A263D613A001175A9 /* BaseViewController.swift in Sources */,
@@ -642,6 +653,7 @@
 				4E19ABF3263D5F4B001175A9 /* SceneDelegate.swift in Sources */,
 				4E19AC4F263D613A001175A9 /* Constants.swift in Sources */,
 				4E55B4022644622B00292C5A /* SPDashboardViewController.swift in Sources */,
+				4EF68CB8265591F000D9CAD3 /* SecoundVC.swift in Sources */,
 				4E19AC54263D613A001175A9 /* CurrentLocation.swift in Sources */,
 				4E59A5472641C15B0027260C /* Extensions+AttributedString.swift in Sources */,
 				4E55B2A72642D5E600292C5A /* NavigationHelper.swift in Sources */,
