@@ -35,6 +35,31 @@ class SPTabBarController: UITabBarController {
         indicatorPlatform.backgroundColor = firstFBItemColor
     }
     
+    public func loadTabbar() {
+      //  let fbTabBarController = SPTabBarController()
+       
+        let firstViewController = dashboardStoryboard.instantiateViewController(withIdentifier:"SPDashboardViewController") as! SPDashboardViewController
+        let navgitaionController1 = UINavigationController(rootViewController: firstViewController)
+        navgitaionController1.tabBarItem = SPTabBarItems(title: "First",
+                                                      image: UIImage(systemName: "1.circle.fill"),
+                                                      tag: 0,
+                                                      tintColor: .systemBlue)
+
+        let secondViewController = dashboardStoryboard.instantiateViewController(withIdentifier:"MasterViewController") as! MasterViewController
+        let navgitaionController2 = UINavigationController(rootViewController: secondViewController)
+        navgitaionController2.tabBarItem = SPTabBarItems(title: "Second",
+                                                       image: UIImage(systemName: "2.circle.fill"),
+                                                       tag: 1,
+                                                       tintColor: .systemTeal)
+
+        let thirdViewController = ThiredVC()
+        thirdViewController.tabBarItem = SPTabBarItems(title: "Third",
+                                                      image: UIImage(systemName: "3.circle.fill"),
+                                                      tag: 2,
+                                                      tintColor: .systemRed)
+        
+        self.setViewControllers([navgitaionController1, navgitaionController2, thirdViewController], animated: true)
+    }
     open override func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {
         super.setViewControllers(viewControllers, animated: animated)
         
