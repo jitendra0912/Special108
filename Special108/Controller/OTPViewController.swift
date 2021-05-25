@@ -92,15 +92,17 @@ class OTPViewController: BaseViewController {
     @IBAction func didTapContinue(_ sender: UIButton) {
         
         let fbTabBarController = SPTabBarController()
-        
-        let firstViewController = FirstVC()
-        firstViewController.tabBarItem = SPTabBarItems(title: "First",
+       
+        let firstViewController = dashboardStoryboard.instantiateViewController(withIdentifier:"SPDashboardViewController") as! SPDashboardViewController
+        let navgitaionController1 = UINavigationController(rootViewController: firstViewController)
+        navgitaionController1.tabBarItem = SPTabBarItems(title: "First",
                                                       image: UIImage(systemName: "1.circle.fill"),
                                                       tag: 0,
                                                       tintColor: .systemBlue)
 
-        let secondViewController = SecoundVC()
-        secondViewController.tabBarItem = SPTabBarItems(title: "Second",
+        let secondViewController = dashboardStoryboard.instantiateViewController(withIdentifier:"MasterViewController") as! MasterViewController
+        let navgitaionController2 = UINavigationController(rootViewController: secondViewController)
+        navgitaionController2.tabBarItem = SPTabBarItems(title: "Second",
                                                        image: UIImage(systemName: "2.circle.fill"),
                                                        tag: 1,
                                                        tintColor: .systemTeal)
@@ -111,16 +113,19 @@ class OTPViewController: BaseViewController {
                                                       tag: 2,
                                                       tintColor: .systemRed)
         
-        fbTabBarController.setViewControllers([firstViewController, secondViewController, thirdViewController], animated: true)
+        fbTabBarController.setViewControllers([navgitaionController1, navgitaionController2, thirdViewController], animated: true)
         
         
         
         
         
-        let rootController  = dashboardStoryboard.instantiateViewController(withIdentifier:"MainNavigation") as? UINavigationController
-        NavigationHelper.shared.navigationController =  rootController
+      
+        
+        NavigationHelper.shared.navigationController  = dashboardStoryboard.instantiateViewController(withIdentifier:"MainNavigation") as? UINavigationController
+        //rootController?.viewControllers = [fbTabBarController]
+      //  NavigationHelper.shared.navigationController =  rootController
       //  NavigationHelper.shared.navigationController.navigationItem.title = "sdmskmds"
-        UIApplication.shared.windows.first!.rootViewController =  rootController
+        UIApplication.shared.windows.first!.rootViewController =  fbTabBarController
        
     }
 }

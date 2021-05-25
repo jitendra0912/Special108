@@ -11,6 +11,7 @@ class SPDashboardViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         self.navigationConfigure()
       }
     

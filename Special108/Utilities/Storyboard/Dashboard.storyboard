@@ -23,6 +23,21 @@
             </objects>
             <point key="canvasLocation" x="-1017" y="-516"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RDH-f3-xvN">
+            <objects>
+                <tabBarController storyboardIdentifier="SPTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J9g-l6-qL0" customClass="SPTabBarController" customModule="Special108" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BpC-MC-6qU"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Id5-xD-df0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqW-Ke-mGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1832" y="-62"/>
+        </scene>
         <!--fgdfg-->
         <scene sceneID="DmP-cJ-H8u">
             <objects>
@@ -47,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRs-Yh-QRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1304" y="258"/>
+            <point key="canvasLocation" x="-975" y="14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M26-F5-FLr">
@@ -60,12 +75,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="h4Z-6E-a4m" kind="relationship" relationship="rootViewController" id="7S9-6g-qv1"/>
+                        <segue destination="J9g-l6-qL0" kind="relationship" relationship="rootViewController" id="QDd-SZ-ZFT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdv-I1-9DH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1971" y="248"/>
+            <point key="canvasLocation" x="-2520" y="1"/>
         </scene>
     </scenes>
     <resources>
